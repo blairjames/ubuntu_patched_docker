@@ -55924,3 +55924,39 @@ Successfully tagged blairy/ubuntu_patched:20201102_223801
 
 
 Already up to date.
+[master e16929d] Automatic build 20201102_223805
+ 1 file changed, 36 insertions(+)
+20201102_223810 - git completed successfully.
+The push refers to repository [docker.io/blairy/ubuntu_patched]
+33ff593c1862: Preparing
+8891751e0a17: Preparing
+2a19bd70fcd4: Preparing
+9e53fd489559: Preparing
+7789f1a3d4e9: Preparing
+2a19bd70fcd4: Layer already exists
+33ff593c1862: Layer already exists
+9e53fd489559: Layer already exists
+8891751e0a17: Layer already exists
+7789f1a3d4e9: Layer already exists
+20201102_223801: digest: sha256:3bb4522d28dce3cd74eb095a8602d872a89f18fa830bbf90e7700521fcd5c48b size: 1364
+20201102_223817 - Docker push completed successfully.
+
+
+20201102_223817 - All completed successfully
+20201102_233801 - Starting Build.
+
+Sending build context to Docker daemon   97.4MB
+Step 1/3 : FROM ubuntu:latest
+ ---> 1d622ef86b13
+Step 2/3 : RUN apt -y update && apt -y dist-upgrade &&     apt -y install     curl     vim     nano     git     wget     bash     net-tools
+ ---> Using cache
+ ---> f9d8129240af
+Step 3/3 : ENTRYPOINT ["/bin/bash"]
+ ---> Using cache
+ ---> bb20bbb7d06f
+Successfully built bb20bbb7d06f
+Successfully tagged blairy/ubuntu_patched:20201102_233801
+20201102_233801 - Build completed successfully.
+
+
+Already up to date.
