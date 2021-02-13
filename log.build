@@ -12975,3 +12975,28 @@ Successfully tagged blairy/ubuntu_patched:20210213_103801
 
 
 20210213_103802 - git
+[master de51851] Automatic build 20210213_103802
+ 1 file changed, 25 insertions(+)
+20210213_103802 - git
+20210213_103802 - git failed!!
+The push refers to repository [docker.io/blairy/ubuntu_patched]
+20210213_103802 - Docker push FAILED!!
+
+
+20210213_113801 - Starting Build.
+
+Sending build context to Docker daemon   11.3MB
+Step 1/3 : FROM ubuntu:latest
+ ---> 1d622ef86b13
+Step 2/3 : RUN apt -y update && apt -y dist-upgrade &&     apt -y install     curl     vim     nano     git     wget     bash     net-tools
+ ---> Using cache
+ ---> ad227f0d61b2
+Step 3/3 : ENTRYPOINT ["/bin/bash"]
+ ---> Using cache
+ ---> 008184b373d9
+Successfully built 008184b373d9
+Successfully tagged blairy/ubuntu_patched:20210213_113801
+20210213_113801 - Build completed successfully.
+
+
+20210213_113801 - git
