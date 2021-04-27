@@ -33,7 +33,7 @@ logger "Starting Build.\n"
 
 
 # Build the image using timestamp as tag.
-if /usr/bin/docker build /home/docker/ubuntu_patched_docker -t docker.io/blairy/ubuntu_patched:$timestp >> $log; then
+if /usr/bin/docker build /home/docker/ubuntu_patched_docker -t docker.io/blairy/ubuntu_patched:$timestp --no-cache --rm --pull >> $log; then
     logger "Build completed successfully.\n\n"
 else
     logger "Build FAILED!! Aborting.\n\n"
@@ -71,7 +71,7 @@ fi
 
 
 # Prune
-/usr/bin/git gc --prune
+cd /home/docker/ubuntu_patched_docker && /usr/bin/git gc --prune
 
 
 # All completed successfully
